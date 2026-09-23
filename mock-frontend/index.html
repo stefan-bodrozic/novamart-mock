@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NovaMart</title>
+    <style>
+      :root {
+        --bg: #f4f1ea;
+        --paper: #fffdf8;
+        --ink: #1c1915;
+        --muted: #5c564c;
+        --line: #e4ddd0;
+        --accent: #0f6e6b;
+        --accent-soft: #e7f3f2;
+        --code: #221f1a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          17px/1.55 Georgia,
+          "Iowan Old Style",
+          "Palatino Linotype",
+          serif;
+      }
+
+      header,
+      main,
+      footer {
+        width: min(980px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 36px 0 4px;
+      }
+
+      h1,
+      h2,
+      h3,
+      .price,
+      nav,
+      .sku,
+      footer {
+        font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: 2.4rem;
+        letter-spacing: -0.03em;
+      }
+      h2 {
+        margin: 0 0 8px;
+        font-size: 1.6rem;
+        letter-spacing: -0.02em;
+      }
+      h3 {
+        margin: 0 0 10px;
+        font-size: 1.05rem;
+        line-height: 1.35;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .lede {
+        margin: 0;
+        color: var(--muted);
+        max-width: 62ch;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+        padding: 20px 0 0;
+        font-size: 0.95rem;
+      }
+
+      nav a {
+        color: var(--accent);
+      }
+
+      section {
+        margin: 0;
+        padding: 40px 0 0;
+        scroll-margin-top: 20px;
+      }
+
+      .intro {
+        margin: 0 0 20px;
+      }
+
+      .category {
+        margin: 28px 0 14px;
+        font-size: 1.15rem;
+      }
+
+      .category:first-of-type {
+        margin-top: 0;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      article {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 18px 20px;
+      }
+
+      .sku {
+        margin: 0 0 8px;
+        color: var(--accent);
+        font-size: 0.78rem;
+        letter-spacing: 0.04em;
+      }
+
+      .price {
+        margin: 0 0 12px;
+        font-size: 1.15rem;
+        font-weight: 650;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.15rem;
+      }
+      li {
+        margin: 0 0 8px;
+      }
+      li:last-child {
+        margin-bottom: 0;
+      }
+
+      article p:last-child {
+        margin-bottom: 0;
+      }
+
+      .faq + .faq,
+      .policy + .policy {
+        margin-top: 16px;
+      }
+
+      footer {
+        padding: 32px 0 120px;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      @media (min-width: 720px) {
+        .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>NovaMart</h1>
+      <p class="lede">
+        Featured smart home electronics and organic pantry goods, plus answers
+        on shipping, warranty, payment, hours, and returns.
+      </p>
+      <nav aria-label="Page sections">
+        <a href="#products">Products</a>
+        <a href="#faq">FAQ</a>
+        <a href="#returns">Return policy</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="products">
+        <h2>Products</h2>
+        <p class="intro">
+          Current featured items across Smart Home Electronics and Organic
+          Groceries &amp; Pantry.
+        </p>
+
+        <h3 class="category">Smart Home Electronics</h3>
+        <div class="grid">
+          <article>
+            <p class="sku">ELEC-1001</p>
+            <h3>NovaAura Smart LED Ambient Light Strip</h3>
+            <p class="price">$34.99</p>
+            <ul>
+              <li>
+                16 million colors with voice control (Alexa and Google Assistant
+                compatible)
+              </li>
+              <li>Music sync mode with dynamic lighting effects</li>
+              <li>Easy cut-to-length installation with adhesive backing</li>
+            </ul>
+          </article>
+          <article>
+            <p class="sku">ELEC-1002</p>
+            <h3>NovaSound Mini Bluetooth Speaker</h3>
+            <p class="price">$49.99</p>
+            <ul>
+              <li>12-hour continuous battery life</li>
+              <li>IPX7 waterproof and drop-resistant design</li>
+              <li>Built-in microphone for hands-free calling</li>
+            </ul>
+          </article>
+          <article>
+            <p class="sku">ELEC-1003</p>
+            <h3>NovaClean Robot Vacuum Cleaner</h3>
+            <p class="price">$219.99</p>
+            <ul>
+              <li>Intelligent LiDAR navigation and mapping</li>
+              <li>2500Pa strong suction with automatic carpet boost</li>
+              <li>Self-charging base and customizable app scheduling</li>
+            </ul>
+          </article>
+          <article>
+            <p class="sku">ELEC-1004</p>
+            <h3>NovaSense Smart Indoor Security Camera</h3>
+            <p class="price">$59.99</p>
+            <ul>
+              <li>2K HD video resolution with automatic night vision</li>
+              <li>AI-powered motion and sound detection</li>
+              <li>Two-way audio and local MicroSD / cloud storage options</li>
+            </ul>
+          </article>
+        </div>
+
+        <h3 class="category">Organic Groceries &amp; Pantry</h3>
+        <div class="grid">
+          <article>
+            <p class="sku">GROC-2001</p>
+            <h3>NovaHarvest Organic Extra Virgin Olive Oil</h3>
+            <p class="price">$18.99</p>
+            <ul>
+              <li>
+                Cold-pressed from 100% certified organic single-origin olives
+              </li>
+              <li>Rich in antioxidants and healthy monounsaturated fats</li>
+              <li>500ml dark glass bottle to preserve freshness</li>
+            </ul>
+          </article>
+          <article>
+            <p class="sku">GROC-2002</p>
+            <h3>NovaBlend Artisanal Espresso Beans</h3>
+            <p class="price">$14.49</p>
+            <ul>
+              <li>
+                Fair-trade organic Arabica beans whole-roasted in small batches
+              </li>
+              <li>
+                Tasting notes of dark chocolate, toasted hazelnut, and caramel
+              </li>
+              <li>12 oz (340g) bag with one-way degassing valve</li>
+            </ul>
+          </article>
+          <article>
+            <p class="sku">GROC-2003</p>
+            <h3>NovaNuts Raw Organic Almonds</h3>
+            <p class="price">$11.99</p>
+            <ul>
+              <li>Unsalted, non-GMO, raw California almonds</li>
+              <li>High in protein, dietary fiber, and Vitamin E</li>
+              <li>16 oz resealable eco-friendly pouch</li>
+            </ul>
+          </article>
+          <article>
+            <p class="sku">GROC-2004</p>
+            <h3>NovaSweet Raw Wildflower Honey</h3>
+            <p class="price">$12.99</p>
+            <ul>
+              <li>100% pure, unfiltered, unpasteurized honey</li>
+              <li>Sourced directly from sustainable local bee farms</li>
+              <li>16 oz recyclable glass jar</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq">
+        <h2>FAQ</h2>
+        <p class="intro">
+          Shipping, warranties, payment options, and store hours.
+        </p>
+
+        <article class="faq">
+          <h3>What shipping options do you offer and how fast are they?</h3>
+          <ul>
+            <li>
+              Standard Shipping: delivered within 3–5 business days. Free on
+              orders over $50.
+            </li>
+            <li>
+              Express Shipping: delivered within 1–2 business days for an
+              additional flat rate calculated at checkout.
+            </li>
+          </ul>
+        </article>
+        <article class="faq">
+          <h3>Do you ship internationally?</h3>
+          <p>
+            Currently, NovaMart ships across the domestic region only. We do not
+            support international shipping at this time.
+          </p>
+        </article>
+        <article class="faq">
+          <h3>What is covered under the product warranty?</h3>
+          <ul>
+            <li>
+              All electronic products sold by NovaMart come with a standard
+              1-Year Limited Manufacturer Warranty.
+            </li>
+            <li>
+              The warranty covers manufacturing defects, hardware faults, and
+              malfunctioning components under normal usage. It does not cover
+              accidental damage, liquid exposure, unauthorized repairs, or
+              general wear and tear.
+            </li>
+          </ul>
+        </article>
+        <article class="faq">
+          <h3>What payment methods are accepted online and in-store?</h3>
+          <ul>
+            <li>
+              Major credit and debit cards (Visa, MasterCard, American Express,
+              Discover)
+            </li>
+            <li>Mobile digital wallets (Apple Pay, Google Pay)</li>
+            <li>NovaMart digital gift cards</li>
+          </ul>
+        </article>
+        <article class="faq">
+          <h3>What are NovaMart's store operating hours?</h3>
+          <ul>
+            <li>Monday – Friday: 8:00 AM – 9:00 PM</li>
+            <li>Saturday: 9:00 AM – 8:00 PM</li>
+            <li>Sunday: 10:00 AM – 6:00 PM</li>
+          </ul>
+        </article>
+        <article class="faq">
+          <h3>How can I reach Customer Support?</h3>
+          <ul>
+            <li>Email: support@novamart.com</li>
+            <li>Phone: 1-800-555-NOVA (available during normal store hours)</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="returns">
+        <h2>Return policy</h2>
+        <p class="intro">
+          NovaMart aims for complete satisfaction with every purchase. These are
+          the return rules.
+        </p>
+
+        <article class="policy">
+          <h3>1. Return window</h3>
+          <p>
+            Customers may return eligible products within 30 days of the
+            original purchase or delivery date.
+          </p>
+        </article>
+        <article class="policy">
+          <h3>2. Proof of purchase</h3>
+          <p>
+            A valid receipt, tax invoice, or online order confirmation is
+            required for all returns, exchanges, or store credit.
+          </p>
+        </article>
+        <article class="policy">
+          <h3>3. General conditions</h3>
+          <ul>
+            <li>
+              Items must be unused, unwashed, and in the same condition as
+              received.
+            </li>
+            <li>
+              Items must be in their original packaging, complete with all
+              included accessories, tags, manuals, and promotional materials.
+            </li>
+          </ul>
+        </article>
+        <article class="policy">
+          <h3>4. Exclusions</h3>
+          <ul>
+            <li>
+              Opened electronics: smart home devices, audio equipment, or
+              personal electronics that have been opened, unsealed, or powered
+              on are non-returnable unless verified as defective upon arrival
+              under warranty terms.
+            </li>
+            <li>
+              Perishable items: opened food products, fresh produce, and
+              refrigerated items cannot be returned.
+            </li>
+            <li>
+              Clearance items: products marked Final Sale or bought during
+              clearance events are non-refundable.
+            </li>
+          </ul>
+        </article>
+        <article class="policy">
+          <h3>5. Refunds</h3>
+          <ul>
+            <li>
+              Approved refunds are credited to the original payment method
+              within 5 to 7 business days after the item is received and
+              inspected.
+            </li>
+            <li>
+              Shipping costs are non-refundable unless the return is due to a
+              NovaMart mistake or a damaged product.
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer>NovaMart. Product catalog, FAQ, and return policy.</footer>
+
+    <elevenlabs-convai
+      agent-id="agent_0601m2t3pyhxf4mbp6cgxrg8nbjg"
+    ></elevenlabs-convai>
+    <script
+      src="https://unpkg.com/@elevenlabs/convai-widget-embed"
+      async
+      type="text/javascript"
+    ></script>
+  </body>
+</html>
